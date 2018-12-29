@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+#myInput {
+  background-image: url('/css/searchicon.png');
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
+#myTable {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid #ddd;
+  font-size: 18px;
+}
+
+#myTable th, #myTable td {
+  text-align: left;
+  padding: 12px;
+}
+
+#myTable tr {
+  border-bottom: 1px solid #ddd;
+}
+
+#myTable tr.header, #myTable tr:hover {
+  background-color: #f1f1f1;
+}
+
+#hidey {
+    visibility: hidden;
+}
+
+.button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.button1 {
+  background-color: white; 
+  color: black; 
+  border: 2px solid #4CAF50;
+}
+
+.button1:hover {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.button2 {
+  background-color: white; 
+  color: black; 
+  border: 2px solid #008CBA;
+}
+
+.button2:hover {
+  background-color: #008CBA;
+  color: white;
+}
+
+.button3 {
+  background-color: white; 
+  color: black; 
+  border: 2px solid #f44336;
+}
+
+.button3:hover {
+  background-color: #f44336;
+  color: white;
+}
+
+.button4 {
+  background-color: white;
+  color: black;
+  border: 2px solid #e7e7e7;
+}
+
+.button4:hover {background-color: #e7e7e7;}
+
+.button5 {
+  background-color: white;
+  color: black;
+  border: 2px solid #555555;
+}
+
+.button5:hover {
+  background-color: #555555;
+  color: white;
+}
+</style>
+</head>
+<body>
+
+        <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for features">
+        <button class="filter-button button button1">evaluated</button>
+        <button class="filter-button">canvas</button>
+        <button class="filter-button">linear</button>
+        <button class="filter-button">dynamic</button>
+        <button class="filter-button">text input</button>
+        <button class="filter-button">pathing</button>
+        <table id="myTable" class="display">
+            <thead>
+                <tr class="header">
+                    <th>Widget</th>
+                    <th>Keywords</th>
+                </tr>
+            </thead>
+            <tbody>
+          <tr>
+            <td style="display:none;">evaluated, canvas, pathing</td>
+            <td>Choose your path</td>
+          </tr>
+          <tr>
+            <td style="display:none;">evaluated, canvas</td>
+            <td>Click Change</td>
+          </tr>
+          <tr>
+            <td style="display:none;">dynamic, canvas</td>
+            <td>Compare/Contrast</td>
+          </tr>
+          <tr>
+            <td style="display:none;">dynamic, canvas</td>
+            <td>Coordinated Image Highlight</td>
+          </tr>
+          <tr>
+            <td style="display:none;">dynamic, canvas</td>
+            <td>Coordinated Text Highlight</td>
+          </tr>
+          <tr>
+            <td style="display:none;">dynamic, canvas</td>
+            <td>Desmos Widget</td>
+          </tr>
+          <tr>
+            <td style="display:none;">dynamic, canvas</td>    
+            <td>Drag and Drop</td>
+          </tr>
+          <tr>
+            <td style="display:none;">dynamic, canvas</td>
+            <td>Equation Balancer</td>
+          </tr>
+          <tr>
+            <td style="display:none;">dynamic, canvas</td>
+            <td>Flashcard Plus</td>
+          </tr>
+          <tr>
+                <td style="display:none;">dynamic, canvas</td>
+            <td>Illustration Animator</td>
+          </tr>
+          <tr>
+                <td style="display:none;">dynamic, canvas</td>
+            <td>Inline Audio Pattern</td>
+          </tr>
+          <tr>
+                <td style="display:none;">dynamic, canvas</td>
+            <td>Inline Text-to-Speech</td>
+          </tr>
+          <tr>
+                <td style="display:none;">dynamic, canvas</td>
+            <td>Instructions Viewer</td>
+          </tr>
+          <tr>
+                <td style="display:none;">dynamic, canvas</td>
+            <td>Layer Reveal</td>
+          </tr>
+          <tr>
+                <td style="display:none;">dynamic, canvas</td>
+            <td>MHE Audio</td>
+          </tr>
+          <tr>
+            <td style="display:none;">canvas</td>
+            <td>MHE Assess</td>
+
+          </tr>
+          <tr>
+                <td style="display:none;">dynamic, canvas</td>
+            <td>MHE Multiple Choice</td>
+          </tr>
+          <tr>
+                <td style="display:none;">dynamic, canvas</td>
+            <td>MHE Timeline</td>
+          </tr>
+          <tr>
+                <td style="display:none;">dynamic, canvas</td>
+            <td>MHE Video</td>
+          </tr>
+          <tr>
+                <td style="display:none;">dynamic, canvas</td>
+            <td>Multi-Step Type Entry</td>
+          </tr>
+          <tr>
+                <td style="display:none;">dynamic, canvas</td>
+            <td>Outline Expander</td>
+          </tr>
+          <tr>
+                <td style="display:none;">dynamic, canvas</td>
+            <td>Paragraph Builder</td>
+          </tr>
+          <tr>
+                <td style="display:none;">dynamic, canvas</td>
+            <td>Paragraph Entry</td>
+          </tr>
+          <tr>
+                <td style="display:none;">dynamic, canvas</td>
+            <td>Poptips Plus</td>
+          </tr>
+          <tr>
+                <td style="display:none;">dynamic, canvas</td>
+            <td>Simple Expander</td>
+          </tr>
+          <tr>
+                <td style="display:none;">dynamic, canvas</td>
+            <td>Slideline Plus</td>
+          </tr>
+          <tr>
+                <td style="display:none;">dynamic, canvas</td>
+            <td>Step by Step</td>
+          </tr>
+          <tr>
+                <td style="display:none;">dynamic, canvas</td>
+            <td>Swype</td>
+          </tr>
+          <tr>
+                <td style="display:none;">dynamic, canvas</td>
+            <td>Table Type Entry</td>
+          </tr>
+          <tr>
+                <td style="display:none;">dynamic, canvas</td>
+            <td>Type Entry</td>
+          </tr>
+          <tr>
+                <td style="display:none;">dynamic, canvas</td>
+            <td>Webpage Viewer</td>
+          </tr>
+            </tbody>
+        </table>
+
+<script>
+
+var table = document.getElementById("myTable");
+var tr = table.getElementsByTagName("tr");
+
+function myFunction() {
+  var input = document.getElementById("myInput");
+  var filter = input.value.toUpperCase();
+  showMatchingCells(filter)
+}
+
+function clickFunction(event) {
+   var filter = event.target.textContent.toUpperCase();
+   showMatchingCells(filter);
+}
+[].slice.call(document.getElementsByClassName("filter-button"), 0).forEach(function(element) {
+  element.onclick = clickFunction;
+})
+function showMatchingCells(filter) {
+    var txtValue, i, td;
+    for (i = 0; i < tr.length; i++) {
+        td = tr[i].getElementsByTagName("td")[0];
+        if (td) {
+            txtValue = td.textContent || td.innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                tr[i].style.display = "";
+            } else {
+                tr[i].style.display = "none";
+            }
+        }
+    }
+}
+</script>
+
+</body>
+</html>
