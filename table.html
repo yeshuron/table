@@ -84,37 +84,54 @@
   color: white;
 }
 
-/* .button3 {
-  background-color: white; 
-  color: black; 
-  border: 2px solid #f44336;
+
+.hideMeAcc {
+display:none;
 }
 
-.button3:hover {
-  background-color: #f44336;
-  color: white;
+.hideMeFb {
+display:none;
 }
 
-.button4 {
-  background-color: white;
+.acGreen {
+  background-color: #b0f442;
   color: black;
-  border: 2px solid #e7e7e7;
+  font-weight: bold;
 }
 
-.button4:hover {background-color: #e7e7e7;}
-
-.button5 {
-  background-color: white;
+.acYellow {
+  background-color: #f4c242; 
   color: black;
-  border: 2px solid #555555;
+  font-weight: bold;  
 }
-
-.button5:hover {
-  background-color: #555555;
-  color: white;
-} */
-
+  
+.acRed {
+  background-color: #f46541; 
+  color: black;
+  font-weight: bold;  
+}
+  
 </style>
+<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous">
+</script>
+<script>
+$(document).ready(function(){
+  $("#accessStatus").click(function(){
+    $(".hideMeAcc").toggle();
+  });
+});
+</script>
+
+<script>
+$(document).ready(function(){
+  $("#fbk").click(function(){
+    $(".hideMeFb").toggle();
+  });
+});
+</script>
 </head>
 <body>
 
@@ -125,11 +142,15 @@
         <button class="filter-button button button1">Definitions</button>
         <button class="filter-button button button1">Compare & Contrast</button>
         <!-- <button class="filter-button button button1">pathing</button> -->
+		<button class="button button2" id="accessStatus">Accessibility Status</button>
+		<button class="button button2" id="fbk">Feedback</button>
+
         <table id="myTable" class="display">
             <thead>
                 <tr class="header">
-                    <th onclick="sortTable(0)">Widget</th>
-                    <th>Accessibility Status</th>
+                    <th>Widget</th>
+                    <th class="hideMeAcc">Accessibility Status</th>
+					<th class="hideMeFb">Feedback</th>
                     <!-- <th>Keywords</th> -->
                 </tr>
             </thead>
@@ -137,27 +158,32 @@
           <tr>
             <td style="display:none;">Presentation, Practice, Show a Process, Definitions, Compare & Contrast</td>
             <td>Choose your path</td>
-            <td>Accessible content can be authored but widget needs some work needs to be done.</td>
+            <td class="hideMeAcc acYellow">Accessible content can be authored but widget needs some work needs to be done.</td>
+			<td class="hideMeFb acGreen">Yes</td>
           </tr>
           <tr>
             <td style="display:none;">Presentation, Practice, Show a Process, Definitions, Compare & Contrast</td>
             <td>Click Change</td>
-            <td>Accessible content can be authored but widget needs some work needs to be done.</td>
+            <td class="hideMeAcc acYellow">Accessible content can be authored but widget needs some work needs to be done.</td>
+			<td class="hideMeFb acGreen">Yes</td>
           </tr>
           <tr>
             <td style="display:none;">Presentation, Definitions, Compare & Contrast</td>
             <td>Compare/Contrast</td>
-            <td>Accessible content can be authored but widget needs some work needs to be done.</td>
+			<td class="hideMeAcc acYellow">Accessible content can be authored but widget needs some work needs to be done.</td>
+			<td class="hideMeFb acGreen">Yes</td>
           </tr>
           <tr>
             <td style="display:none;">Presentation, Show a Process, Definitions, Compare & Contrast</td>
             <td>Coordinated Image Highlight</td>
-            <td>Accessible content can be authored but widget needs some work needs to be done.</td>
+			<td class="hideMeAcc acYellow">Accessible content can be authored but widget needs some work needs to be done.</td>
+			<td class="hideMeFb acRed">No</td>
           </tr>
           <tr>
             <td style="display:none;">Presentation, Show a Process, Definitions, Compare & Contrast</td>
             <td>Coordinated Text Highlight</td>
-            <td>Accessible content can be authored but widget needs some work needs to be done.</td>
+			<td class="hideMeAcc acYellow">Accessible content can be authored but widget needs some work needs to be done.</td>
+			<td class="hideMeFb acGreen">Yes</td>
           </tr>
           <tr>
             <!-- <td style="display:none;">Presentation</td>
@@ -166,17 +192,20 @@
           <tr>
             <td style="display:none;">Presentation, Practice, Definitions, Compare & Contrast</td>
             <td>Drag and Drop</td>
-            <td>Accessible content can be authored but widget needs some work needs to be done.</td>
+			<td class="hideMeAcc acYellow">Accessible content can be authored but widget needs some work needs to be done.</td>
+			<td class="hideMeFb acGreen">Yes</td>
           </tr>
           <tr>
             <td style="display:none;">Presentation</td>
             <td>Equation Balancer</td>
-            <td>Accessible content can be authored but widget needs some work needs to be done.</td>
+			<td class="hideMeAcc acYellow">Accessible content can be authored but widget needs some work needs to be done.</td>
+			<td class="hideMeFb acRed">No</td>
           </tr>
           <tr>
             <td style="display:none;">Presentation, Practice, Definitions, Compare & Contrast</td>
             <td>Flashcard Plus</td>
-            <td>Accessible content can be authored but widget needs some work needs to be done.</td>
+			<td class="hideMeAcc acYellow">Accessible content can be authored but widget needs some work needs to be done.</td>
+			<td class="hideMeFb acRed">No</td>
           </tr>
           <!-- <tr>
                 <td style="display:none;">dynamic, canvas</td>
@@ -185,111 +214,141 @@
           <tr>
             <td style="display:none;">Presentation</td>
             <td>Inline Audio Pattern</td>
-            <td>Accessible content can be authored but widget needs some work needs to be done.</td>
+			<td class="hideMeAcc acRed">Not Accessible.</td>
+			<td class="hideMeFb acRed">No</td>
           </tr>
           <tr>
             <td style="display:none;">Presentation</td>
             <td>Inline Text-to-Speech</td>
-            <td>Accessible content can be authored but widget needs some work needs to be done.</td>
+			<td class="hideMeAcc acRed">Not Accessible.</td>
+			<td class="hideMeFb acRed">No</td>
 
           </tr>
           <tr>
             <td style="display:none;">Presentation, Show a Process</td>
             <td>Instructions Viewer</td>
-            <td>Accessible content can be authored but widget needs some work needs to be done.</td>
+			<td class="hideMeAcc acYellow">Accessible content can be authored but widget needs some work needs to be done.</td>
+			<td class="hideMeFb acRed">No</td>
 
           </tr>
           <tr>
             <td style="display:none;">Presentation, Show a Process, Definitions, Compare & Contrast</td>
             <td>Layer Reveal</td>
-            <td>Accessible content can be authored but widget needs some work needs to be done.</td>
+			<td class="hideMeAcc acYellow">Accessible content can be authored but widget needs some work needs to be done.</td>
+			<td class="hideMeFb acRed">No</td>
 
           </tr>
           <tr>
             <td style="display:none;">Presentation</td>
             <td>MHE Audio</td>
-            <td>Accessible content can be authored but widget needs some work needs to be done.</td>
+			<td class="hideMeAcc acYellow">Accessible content can be authored but widget needs some work needs to be done.</td>
+			<td class="hideMeFb acRed">No</td>
 
           </tr>
           <tr>
             <td style="display:none;">Practice</td>
             <td>MHE Assess</td>
-            <td>Accessible</td>
+            <td class="hideMeAcc acGreen">Accessible</td>
+			<td class="hideMeFb acGreen">Yes</td>
           </tr>
           <tr>
             <td style="display:none;">Presentation, Practice, Definitions</td>
             <td>MHE Multiple Choice</td>
-            <td>Accessible</td>
+            <td class="hideMeAcc acGreen">Accessible</td>
+			<td class="hideMeFb acGreen">Yes</td>
           </tr>
           <tr>
             <td style="display:none;">Presentation, Show a Process</td>
             <td>MHE Timeline</td>
-            <td>Accessible content can be authored but widget needs some work needs to be done.</td>
+            <td class="hideMeAcc acGreen">Accessible</td>
+			<td class="hideMeFb acRed">No</td>
 
           </tr>
           <tr>
             <td style="display:none;">Presentation</td>
             <td>MHE Video</td>
-            <td>Accessible</td>
+            <td class="hideMeAcc acGreen">Accessible</td>
+			<td class="hideMeFb acRed">No</td>
 
           </tr>
           <tr>
             <td style="display:none;">Presentation, Practice, Show a Process, Definitions, Compare & Contrast</td>
             <td>Multi-Step Type Entry</td>
-            <td>Accessible content can be authored but widget needs some work needs to be done.</td>
+			<td class="hideMeAcc acYellow">Accessible content can be authored but widget needs some work needs to be done.</td>
+			<td class="hideMeFb acGreen">Yes</td>
           </tr>
           <tr>
             <td style="display:none;">Presentation, Show a Process, Definitions, Compare & Contrast</td>
             <td>Outline Expander</td>
-            <td>Accessible</td>
+            <td class="hideMeAcc acGreen">Accessible</td>
+			<td class="hideMeFb acRed">No</td>
 
           </tr>
           <tr>
             <td style="display:none;">Presentation, Practice, Definitions, Compare & Contrast</td>
             <td>Paragraph Builder</td>
-            <td>Accessible content can be authored but widget needs some work needs to be done.</td>
+			<td class="hideMeAcc acYellow">Accessible content can be authored but widget needs some work needs to be done.</td>
+			<td class="hideMeFb acGreen">Yes</td>
           </tr>
+		  
           <tr>
             <td style="display:none;">Presentation, Practice, Show a Process, Definitions, Compare & Contrast</td>
             <td>Paragraph Entry</td>
+			<td class="hideMeAcc acGreen">Accessible</td>
+			<td class="hideMeFb acGreen">Yes</td>
           </tr>
           <tr>
             <td style="display:none;">Presentation, Practice, Definitions, Compare & Contrast</td>
             <td>Poptips Plus</td>
+			<td class="hideMeAcc acYellow">Accessible content can be authored but widget needs some work needs to be done.</td>
+			<td class="hideMeFb acGreen">Yes</td>
           </tr>
           <tr>
             <td style="display:none;">Presentation, Definitions, Compare & Contrast</td>
             <td>Simple Expander</td>
+			<td class="hideMeAcc acYellow">Accessible content can be authored but widget needs some work needs to be done.</td>
+			<td class="hideMeFb acRed">No</td>
           </tr>
           <tr>
             <td style="display:none;">Presentation, Show a Process, Definitions, Compare & Contrast</td>
             <td>Slideline Plus</td>
+			<td class="hideMeAcc acYellow">Accessible content can be authored but widget needs some work needs to be done.</td>
+			<td class="hideMeFb acRed">No</td>
           </tr>
           <tr>
             <td style="display:none;">Presentation, Show a Process, Definitions, Compare & Contrast</td>
             <td>Step by Step</td>
+			<td class="hideMeAcc acYellow">Accessible content can be authored but widget needs some work needs to be done.</td>
+			<td class="hideMeFb acRed">No</td>
           </tr>
           <tr>
             <td style="display:none;">Presentation, Show a Process, Definitions, Compare & Contrast</td>
             <td>Swype</td>
+			<td class="hideMeAcc acYellow">Accessible content can be authored but widget needs some work needs to be done.</td>
+			<td class="hideMeFb acRed">No</td>
           </tr>
           <tr>
             <td style="display:none;">Presentation, Practice, Definitions, Compare & Contrast</td>
             <td>Table Type Entry</td>
+			<td class="hideMeAcc acYellow">Accessible content can be authored but widget needs some work needs to be done.</td>
+			<td class="hideMeFb acGreen">Yes</td>
           </tr>
           <tr>
             <td style="display:none;">Presentation, Practice, Show a Process, Definitions, Compare & Contrast</td>
             <td>Type Entry</td>
+			<td class="hideMeAcc acYellow">Accessible content can be authored but widget needs some work needs to be done.</td>
+			<td class="hideMeFb acGreen">Yes</td>
           </tr>
           <tr>
             <td style="display:none;">Presentation, Practice, Show a Process, Definitions, Compare & Contrast</td>
             <td>Webpage Viewer</td>
+			<td class="hideMeAcc acYellow">Accessible content can be authored but widget needs some work needs to be done.</td>
+			<td class="hideMeFb acRed">No</td>
           </tr>
             </tbody>
         </table>
 
-<script>
-
+<script> <!-- Search Script -->
 var table = document.getElementById("myTable");
 var tr = table.getElementsByTagName("tr");
 
@@ -321,7 +380,9 @@ function showMatchingCells(filter) {
     }
 }
 </script>
-<script>
+
+
+<script> <!-- Table Sort Script -->
 function sortTable(n) {
   var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
   table = document.getElementById("myTable");
