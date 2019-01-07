@@ -1,0 +1,165 @@
+* {
+  box-sizing: border-box;
+}
+
+#myInput {
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
+#myTable {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid #ddd;
+  font-size: 18px;
+}
+
+#myTable th, #myTable td {
+  text-align: left;
+  padding: 12px;
+}
+
+#myTable tr {
+  border-bottom: 1px solid rgba(221, 221, 221, 0.274);
+}
+
+#myTable tr.header, #myTable tr:hover {
+  background-color: #f1f1f1;
+}
+
+#hidey {
+    visibility: hidden;
+}
+
+.button {
+  <!-- float: left; -->
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  min-width: 120px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.button1 {
+  background-color: white; 
+  color: black; 
+  border: 2px solid #4CAF50;
+}
+
+.button1:hover {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.button1:focus {
+  background-color: #555555;
+  color: white;
+}
+
+.buttonSub {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  height: 20px;
+  line-height: 0px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+
+.button1a {
+  background-color: white; 
+  color: black; 
+  border: 2px solid #4CAF50;
+}
+
+.button1a:hover {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.button1a:focus {
+  background-color: #555555;
+  color: white;
+}
+
+.button2 {
+  background-color: white; 
+  color: black; 
+  border: 2px solid #008CBA;
+}
+
+.button2:hover {
+  background-color: #008CBA;
+  color: white;
+}
+
+
+.hideMeAcc {
+display:none;
+}
+
+.hideMeFb {
+display:none;
+}
+
+.hideMeB {
+display:none;
+}
+
+.acGreen {
+  background-color: #b0f442;
+  color: black;
+  font-weight: bold;
+}
+
+.acYellow {
+  background-color: #f4c242; 
+  color: black;
+  font-weight: bold;  
+}
+  
+.acRed {
+  background-color: #f46541; 
+  color: black;
+  font-weight: bold;  
+}
+  
+.buttonNav {
+display:flex;
+width: 100%;
+}  
+
+.buttonNavSub {
+display:flex;
+flex-wrap: nowrap;
+width: 100%;
+}  
+
+.meta {
+display:none;
+}
+
+.p2 {
+font-size: 24pt;
+
