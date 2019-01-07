@@ -21,7 +21,13 @@
 
 #myTable th, #myTable td {
   text-align: left;
-  padding: 12px;
+padding-top: 12px;
+padding-bottom: 12px;
+padding-left: 12px;
+padding-right: 12px;
+  width: 100%;
+  max-width: 300px;
+
 }
 
 #myTable tr {
@@ -37,7 +43,7 @@
 }
 
 .button {
-  <!-- float: left; -->
+
   background-color: #4CAF50; /* Green */
   border: none;
   color: white;
@@ -161,5 +167,30 @@ display:none;
 }
 
 .p2 {
-font-size: 24pt;
+font-size: 20pt;
+font-weight: bold; 
+}
 
+a:link {
+  color: blue; 
+  background-color: transparent; 
+  text-decoration: none;
+}
+
+a:visited {
+  color: blue;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:hover {
+  color: green;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+a:active {
+  color: blue;
+  background-color: transparent;
+  text-decoration: underline;
+}
