@@ -17,16 +17,17 @@
   width: 100%;
   border: 1px solid #ddd;
   font-size: 18px;
+  table-layout: fixed;
 }
 
 #myTable th, #myTable td {
-  text-align: left;
-padding-top: 12px;
-padding-bottom: 12px;
-padding-left: 12px;
-padding-right: 12px;
-  width: 100%;
-  max-width: 300px;
+	text-align: left;
+	padding-top: 12px;
+	padding-bottom: 12px;
+	padding-left: 12px;
+	padding-right: 12px;
+	width: 100%;
+	max-width: 300px;
 
 }
 
