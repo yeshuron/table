@@ -4,9 +4,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
-<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
-<script type="text/javascript" src="scripts.js"></script>
 </head>
 <body>
 
@@ -42,7 +41,7 @@
           <tr>
             
             <td class="p2"><a href="https://habitat.inkling.com/project/sn_111/files/s9ml/chapter40/getting_to_know_you.html" target="_blank">Choose your path</a></td>
-			<td>Info Placeholder</td>
+			<td><i class="material-icons">info</i><i class="material-icons">play_arrow</i></td>
 			<td class="meta">Exploratory, Presentation, Practice, Explain a Process, Definitions, Compare & Contrast</td>
 			<td class="hideMeAcc acYellow">Accessible content can be authored but widget needs some work needs to be done.</td>
 			<td class="hideMeFb acGreen">Yes</td>
@@ -238,43 +237,8 @@
           </tr>
             </tbody>
         </table>
-
-<script> <!-- Search Script -->
-var table = document.getElementById("myTable");
-var tr = table.getElementsByTagName("tr");
-
-function myFunction() {
-  var input = document.getElementById("myInput");
-  var filter = input.value.toUpperCase();
-  showMatchingCells(filter)
-}
-
-function clickFunction(event) {
-   var filter = event.target.textContent.toUpperCase();
-   showMatchingCells(filter);
-}
-[].slice.call(document.getElementsByClassName("filter-button"), 0).forEach(function(element) {
-  element.onclick = clickFunction;
-})
-document.getElementById('clear-button').onclick = function() { showMatchingCells('');     $(".hideMeB").hide();
-    $(".hideMeAcc").hide();} 
-
-function showMatchingCells(filter) {
-    var txtValue, i, td;
-    for (i = 0; i < tr.length; i++) {
-        td = tr[i].getElementsByClassName("meta")[0];
-        if (td) {
-            txtValue = td.textContent || td.innerText;
-            if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                tr[i].style.display = "";
-            } else {
-                tr[i].style.display = "none";
-            }
-        }
-    }
-}
-</script>
-
-
+		<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+		<script type="text/javascript" src="scripts.js"></script>
 </body>
+
 </html>
