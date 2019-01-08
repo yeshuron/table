@@ -49,9 +49,22 @@ function showMatchingCells(filter) {
     }
 }
 
-function poppy() {
-  var popup = document.getElementById("myPopup");
-  popup.classList.toggle("show");
-}
+// function poppy() {
+//   var popup = document.getElementById("myPopup");
+//   popup.classList.toggle("show");
+// }
 
-function clickFunction(event) {
+
+function popupClick(event) {
+  
+  var popTarget = $(event.currentTarget).find(".myPopup");
+  var isHidden =  popTarget.css("display") == "none"
+  $(".myPopup").hide();
+  if (isHidden) {
+    popTarget.show(); 
+  }
+  else {
+    popTarget.hide();
+  }
+ }
+$('.popupBtn').on('click', popupClick)
