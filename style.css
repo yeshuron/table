@@ -252,3 +252,19 @@ a:active {
   from {opacity: 0;}
   to {opacity:1 ;}
 }
+
+.myPopup {
+display:none;
+position: absolute;
+bottom:30px;
+background-color: #008CBA;
+font-size:16px;
+min-width: 200px;
+z-index: 1;
+}
+
+
+.popupBtn {
+  font-size: 24px;
+  position:relative;
+}
