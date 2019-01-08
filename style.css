@@ -35,8 +35,18 @@
   border-bottom: 1px solid rgba(221, 221, 221, 0.274);
 }
 
-#myTable tr.header, #myTable tr:hover {
-  background-color: #f1f1f1;
+tr:nth-child(even) {
+  background-color: #f2f2f2
+}
+
+#myTable tr.header {
+  background-color: #9b9494;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+#myTable tr:hover {
+  background-color: #9b9494;
 }
 
 #hidey {
@@ -168,7 +178,7 @@ display:none;
 }
 
 .p2 {
-font-size: 20pt;
+font-size: 18pt;
 font-weight: bold; 
 }
 
