@@ -26,6 +26,7 @@
 			<div><button class="filter-button button button1">Compare & Contrast</button></div>
 			<div><button class="button button2" id="accessStatus">Accessibility Status</button></div>
 			<div><button class="button button2" id="fbk">Feedback</button></div>
+			<div><button class="button button2" id="clear-button">Reset</button></div>
 		</div>
 
         <table id="myTable" class="display">
@@ -255,6 +256,9 @@ function clickFunction(event) {
 [].slice.call(document.getElementsByClassName("filter-button"), 0).forEach(function(element) {
   element.onclick = clickFunction;
 })
+document.getElementById('clear-button').onclick = function() { showMatchingCells('');     $(".hideMeB").hide();
+    $(".hideMeAcc").hide();}
+
 function showMatchingCells(filter) {
     var txtValue, i, td;
     for (i = 0; i < tr.length; i++) {
